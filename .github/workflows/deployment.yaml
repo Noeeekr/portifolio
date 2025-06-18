@@ -1,0 +1,13 @@
+name: Continuous Integration
+
+on: 
+  push:
+    branches:
+      ["main"]
+
+jobs:
+  deployment-test:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - run: echo "New push request made"
