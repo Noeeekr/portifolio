@@ -3,7 +3,7 @@ name: Continuous Integration Test
 on: 
   push:
     branches:
-      ["v1-workflows-test"]
+      ["main-workflow-test"]
 
 jobs:
   deployment-test:
