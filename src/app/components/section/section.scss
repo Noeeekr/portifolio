@@ -1,0 +1,63 @@
+@use "styles/_variables" as *;
+
+:host {
+    width: min(100%, 90rem);
+    padding: 20px;
+
+    ::ng-deep [title] {
+        font-size: 5rem;
+        color: map-get($neutral, "1100");
+
+        margin-bottom: 4rem;
+    }
+    ::ng-deep [subtitle] {
+        font-size: 3rem;
+        font-weight: 400;
+
+        color: map-get($neutral, "600");
+    }
+    ::ng-deep [paragraph] {
+        font-size: 2.4rem;
+        font-weight: 300;
+        color: map-get($neutral, "1100");
+
+        margin-bottom: 0.6rem;
+    }
+    ::ng-deep [extra] {
+        font-size: 2rem;
+        color: map-get($neutral, "200");
+
+        margin-bottom: 2rem;
+    }
+
+    margin: 0 auto;
+}
+
+@media screen and (max-width: map-get($breakpoints, "md")) {
+    :host {
+        ::ng-deep [title] {
+            font-size: 6rem;
+            color: map-get($neutral, "1100");
+        }
+        ::ng-deep [subtitle] {
+            font-size: 3rem;
+            color: map-get($neutral, "600");
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, "sm")) {
+    :host {
+        ::ng-deep [title] {
+            font-size: 7rem;
+            color: map-get($neutral, "1100");
+
+            margin-bottom: 4rem;
+        }
+        ::ng-deep [subtitle] {
+            font-size: 4rem;
+            color: map-get($neutral, "600");
+        }
+    }
+}
+

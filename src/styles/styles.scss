@@ -1,0 +1,58 @@
+@use "styles/_variables.scss" as self;
+
+@import 'bootstrap/scss/bootstrap';
+
+/* z-index */
+// 0 - 100 background elements
+// 101 - 200 main elements
+// 201 - 300 front elements
+
+html {
+    font-size: min(1vw,10px);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, ol {
+    padding: 0;
+
+    list-style-type: none;
+
+    margin: 0;
+}
+a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+body {
+    position: relative;
+
+    background-color: map-get(self.$black, "400");
+    width: 100%;
+    height: auto;
+        min-height: 100vh;
+    
+    font-family: "Raleway", sans-serif;
+
+    overflow-x: hidden;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+
+    margin: 0;
+}
+
+.rainbow {
+    background: linear-gradient(20deg, rgb(207, 53, 207),rgb(73, 180, 237));
+    background-clip: text;
+    
+    color: transparent;
+}
+.underline {
+    text-decoration: underline;
+}
+html, body { height: 100%; }

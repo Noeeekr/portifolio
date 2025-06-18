@@ -1,0 +1,36 @@
+<!-- List -->
+<div
+    *ngIf="list"
+    class="link list" 
+>
+    {{ title }}
+    <mat-icon 
+        *ngIf="list" 
+        svgIcon="arrow-right" 
+        class="icon"
+    ></mat-icon>
+</div>
+<!-- Not list -->
+<a 
+    *ngIf="!list"
+    class="link" 
+    [attr.href]="href ? 'href' : '/'"
+>
+    {{ title }}
+</a>
+<nav
+    class="menu"
+    *ngIf="list"
+>
+    @for (item of items; track item.title + item.href) {
+        <a class="item link" href="{{ href }}">
+            <p class="title">{{ item.title }}</p>
+            <mat-icon 
+                *ngIf="list" 
+                svgIcon="arrow-right" 
+                class="icon"
+            ></mat-icon>
+            <p class="description">{{ item.description }}</p>
+        </a>
+    }
+</nav>

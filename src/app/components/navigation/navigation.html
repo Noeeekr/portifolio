@@ -1,0 +1,154 @@
+<div class="wrapper">
+<div class="visible_area">
+	<div class="decoration">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+    <!--
+        Instead of default icon, make one like google docs clip path animation icon
+        Fuck you, do it, by. any. means.
+
+        Navbar content:
+            Pages
+                - Home
+                - Blog
+                - Specialist DevOps area
+                - Web development area
+                - System architeture area
+            Projects
+                - Aqueduct
+                - Oceanroute
+                - Singullar
+                - Yourgut Hearth
+                - GoPersist
+                - WeaverWatch
+    -->
+    <div class="buttons">
+        <div class="buttons">
+            <CustomLink 
+                title="Navigation"
+                [list]="true" 
+                [items]='[
+                    {
+                        title: "Home",
+                        description: "Find details about my skills and projects",
+                        href: "/",
+                    },
+                    {
+                        title: "Web development",
+                        description: "Dive into a world of component rich interfaces",
+                        href: "/web",
+                    },
+                    {
+                        title: "Platform",
+                        description: "View my path as a platform engineer with tools like Docker and Terraform",
+                        href: "/platform",
+                    },
+                    {
+                        title: "Back end",
+                        description: "Take a look at the architecture and design of my most precious projects",
+                        href: "",
+                    }
+                ]'
+            >
+            </CustomLink>
+            <CustomLink 
+                title="Projects"
+                [list]="true"
+                [items]='[
+                    {
+                        title: "Aqueduct",
+                        description: "Secure local network file sharing program.. Currently under development for online sharing",
+                        href: "/",
+                    },
+                    {
+                        
+                        title: "Singullar",
+                        description: "All-in-one school managment platform that let school staff do all their tasks without the need to learn many different technologies",
+                        href: "/",
+                    },
+                    {
+                        title: "Oceanroute",
+                        description: "Site provisioned by an wrapper on top of amadeus api that lets people find the best prices for flights all over the world",
+                        href: "/",
+                    },
+                    {
+                        title: "Yourgut/hearth",
+                        description: "Fast and light-weight golang library focused on getting analytics of programs",
+                        href: "/",
+                    },
+                    {
+                        title: "Yourgut/stomach",
+                        description: "Database backup utility via command line interface (CLI)",
+                        href: "/",
+                    },
+                    {
+                        title: "Yourgut/brain",
+                        description: "Implement intelligent gateways that can control diverse aspects of an application",
+                        href: "/"
+                    },
+                    {
+                        title: "WeaverWatch",
+                        description: "Cinema movie reservation system with beautifull views and resourcefull analytics for staff",
+                        href: "/"
+                    }
+                ]'
+            ></CustomLink>
+            <CustomLink 
+                title="Socials"
+                href="socials"
+            ></CustomLink>
+            <CustomLink 
+                title="Career"
+                href="career"
+            ></CustomLink>
+        </div>
+        <div class="buttons right">
+            <CustomLink 
+                link
+                title="Contact me"
+                href="/"
+            ></CustomLink>
+            <CustomLink 
+                link
+                white
+                title="Download curriculum"
+                href="/"
+            ></CustomLink>
+        </div>
+    </div>
+	<button
+        title="open menu"
+		type="button"
+		role="button"
+		class="menu_button"
+		[ngClass]="{ active: showMenu }" 
+        (click)="toggleMenu()"
+	>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</button>
+</div>
+<nav class="menu_wrapper" [ngClass]="{ active: showMenu }">
+    <div class="menu">
+        <h2 class="title">Navegar</h2>
+        <ul class="list">
+            <li class="item"><a class="item" href="">[redacted]</a></li>
+            <li class="item"><a class="item" href="">[redacted]</a></li>
+            <li class="item"><a class="item" href="">[redacted]</a></li>
+            <li class="item"><a class="item" href="">[redacted]</a></li>
+        </ul>
+    </div>
+    <div class="menu">
+        <h2 class="title">Opções</h2>
+        <ul class="list">
+            <li><a class="item" href="">Desabilitar notificações</a></li>
+            <li><a class="item" href="">Ver projetos front-end</a></li>
+            <li><a class="item" href="">Ver redes sociais</a></li>
+            <li><a class="item colorful"  href="">Ir para a próxima sessão</a></li>
+        </ul>
+    </div>
+</nav>
+</div>

@@ -1,0 +1,50 @@
+@use "styles/_variables" as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    text-align: center;
+    padding: 15rem 0px;
+
+    ::ng-deep[image] {
+        background-color: f_opacity($neutral, "1000", 0.1);
+        width: 26rem;
+        height: 26rem;
+        border: solid 1px white;
+        border-radius: 3rem;
+
+        color: deepskyblue;
+    }
+    ::ng-deep[title] {
+        padding: 0px 2rem;
+
+        font-size: 7rem;
+        font-weight: 300;
+        color: white;
+    }
+    ::ng-deep[subtitle] {
+        padding: 0px 2rem;
+        
+        font-size: 4rem;
+        font-weight: 300;
+        color: map-get($neutral, "400");
+    }
+
+}
+
+@media screen and (max-width: map-get($breakpoints, "sm")) {
+    :host {
+        padding: 20rem 0px;
+
+        ::ng-deep[title] {
+            font-size: 9rem;
+            color: white;
+        }
+        ::ng-deep[subtitle] {
+            font-size: 5rem;
+            color: map-get($neutral, "400");
+        }
+    }
+}
