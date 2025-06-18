@@ -1,0 +1,13 @@
+name: Continuous Integration Test
+
+on: 
+  push:
+    branches:
+      ["v1-workflows-test"]
+
+jobs:
+  deployment-test:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - run: echo "New push request made"
